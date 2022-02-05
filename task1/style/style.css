@@ -73,16 +73,18 @@ details > summary {
 }
 
 .details summary {
+	background: rgb(0, 0, 0);
+	color: white;
+	border-radius: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-bottom: 5px;
+	padding-bottom: 7px;
+	padding-top: 5px;
 	width: 100%;
 	cursor: pointer;
 	font-family: FreeMono, monospace;
 	font-size: 40px;
 	text-shadow: -0.2px -0.2px 0.6px;
-	border-style: none none solid none;
-	border-width: 3px;
 }
 
 .details summary p:hover {
@@ -112,6 +114,7 @@ details > summary {
 }
 
 .subdetails summary{
+	background: transparent;
 	font-size: 20px;
 	color: gray;
 	border: none;
