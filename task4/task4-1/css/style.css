@@ -1,0 +1,139 @@
+@import url(reset.css);
+
+.page {
+	height: 2200px;
+  background-image: url(https://c1.staticflickr.com/6/5173/5436446554_9244788c36_b.jpg);
+  position: static;
+}
+
+.rocket {
+  background-image: url(https://www.freeiconspng.com/uploads/rocket-ship-png-1.png);
+  background-size: contain;
+  width: 80px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  bottom: 10%;
+	left: 0;
+	right: 0;
+	margin-left: 52%;
+  z-index: 10;
+}
+
+.sun {
+	background-image: url(https://pics.freeicons.io/uploads/icons/png/4941766021637258773-512.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10px;
+	margin: auto;
+}
+
+.mercury {
+	background-image: url(https://cdn3.iconfinder.com/data/icons/planets-1/512/Mercury-256.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 400px;
+	margin: auto;
+}
+
+.venus {
+  background-image: url(https://www.pngrepo.com/download/285152/planet.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  position: absolute;
+	left: 0;
+	right: 0;
+	top: 600px;
+	margin: auto;
+}
+
+.earth {
+ 	background-image: url(https://pics.freeicons.io/uploads/icons/png/68863564516354197474526-512.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 800px;
+	margin: auto;
+}
+
+.mars {
+  background-image: url(http://pngimg.com/uploads/mars_planet/mars_planet_PNG11.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  position: absolute;
+	left: 0;
+	right: 0;
+	top: 1000px;
+	margin: auto;
+}
+
+.jupiter {
+	background-image: url(https://cdn3.iconfinder.com/data/icons/planets-1/512/Jupiter-256.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1200px;
+	margin: auto;
+}
+
+.saturn {
+	background-image: url(https://pics.freeicons.io/uploads/icons/png/658891991637258735-512.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1400px;
+	margin: auto;
+}
+
+.uran {
+	background-image: url(https://cdn3.iconfinder.com/data/icons/planets-1/512/Neptune-256.png);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1600px;
+	margin: auto;
+}
+
+.neptun {
+	background-image: url(https://cdn2.iconfinder.com/data/icons/solar_system_png/512/Neptune.png);
+	background-size: cover;
+	width: 400px;
+	height: 400px;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1800px;
+	margin: auto;
+}
