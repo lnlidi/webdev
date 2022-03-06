@@ -63,12 +63,13 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	top: 40%;
+	top: 30%;
 	z-index: 1;
 	/* вызовите вашу анимацию здесь */
+	transform: scale(1.5);
   animation-name: around;
-  animation-duration: 6s;
+  animation-duration: 2.5s;
   animation-delay: 0s;
   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation-iteration-count: infinite;
+  animation-iteration-count: 5;
 }
