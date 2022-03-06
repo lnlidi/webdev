@@ -1,0 +1,74 @@
+@import url(reset.css);
+
+/*тут ваш keyframe код*/
+@keyframes around{
+  0% {
+  	z-index: 1;
+  	top: 30%;
+  	transform: scale(1.5);
+  }
+  
+  25% {
+  	z-index: 1;
+  	left: 30%;
+	  transform: scale(0.8);
+  }
+
+
+  50% {
+  	z-index: 0;
+  	top: -30%;
+  	transform: scale(0.5);
+  }
+
+  75% {
+  	z-index: 1;
+  	left: -30%;
+  	transform: scale(0.8);
+  }
+
+  100% {
+  	z-index: 1;
+  	top: 30%;
+  	transform: scale(1.5);
+  }
+}
+
+.page {
+  /* эти единицы измерения мы изучим чуть позже */
+	width: 100vw;
+	height: 100vh;
+	background-image: url(https://c1.staticflickr.com/6/5173/5436446554_9244788c36_b.jpg);
+	display: flex;
+	position: relative;
+}
+.sun {
+	width: 300px;
+	height: 300px;
+	background-image: url(https://pics.freeicons.io/uploads/icons/png/4941766021637258773-512.png);
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	z-index: 1;
+}
+.earth {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 100px;
+	background-image: url(https://pics.freeicons.io/uploads/icons/png/68863564516354197474526-512.png);
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	top: 40%;
+	z-index: 1;
+	/* вызовите вашу анимацию здесь */
+  animation-name: around;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-iteration-count: infinite;
+}
