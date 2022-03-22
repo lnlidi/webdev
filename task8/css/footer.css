@@ -1,0 +1,18 @@
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 5px 10px 0px;
+}
+
+footer .info {
+	margin: auto;
+	font-family: Impact, fantasy;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 1);
+}

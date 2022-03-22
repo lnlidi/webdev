@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	left: 0;
+}
+
+html { 
+	position: relative; 
+	min-height: 100%;
+}
+
+body {
+	min-width: 100%;
+	min-height: 100vh;
+	background-image: url("../img/ffflux.svg");
+	background-position: center;
+	background-repeat: repeat-y;
+	background-size: cover;
+	overflow-y: overlay;
+}
+
+.page {
+	min-width: 100%;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}
