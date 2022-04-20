@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task2</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<main class="container">
+
+		<!-- 1 -->
+		<details class="details" id="getAge">
+			<summary>
+				<h1>getAge</h1>
+			</summary>
+			<div class="ex">
+				<h2>
+					•Написать<br>
+					функцию getAge, чтобы она возвращала введенный<br>
+					возраст пользователя в следующем году<br>
+					(сколько будет ему лет в след году).<br>
+					(вводите 18 = выводит 19)
+				</h2>
+
+				<form onSubmit="return false;">
+					<label for="inputEx1" >Input age: </label>
+					<input type="number" id="inputEx1" onkeyup="getAge()" onchange="getAge()">
+					
+					<p>
+						Age next year:
+						<span id="resultEx1">Enter age!</span>
+					</p>
+				</form>
+			</div>
+		</details>
+
+
+		<!-- 2 -->
+		<details class="details" id="getRemainder">
+			<summary>
+				<h1>getRemainder</h1>
+			</summary>
+			<div class="ex">
+				<h2>
+					•Напишите<br>
+					функцию getRemainder, чтобы она возвращала остаток<br>
+					деления принятых в параметрах числа и делителя.<br>
+					(вводите 10 и 3 = выводит 1)
+				</h2>
+
+				<form onSubmit="return false;">
+					<label>Input: </label>
+					<input type="number" id="inputEx2_a" onkeyup="getRemainder()" onchange="getRemainder()">
+					%
+					<input type="number" id="inputEx2_b" onkeyup="getRemainder()" onchange="getRemainder()">
+					=
+					<span id="resultEx2">No values!</span>
+				</form>
+			</div>
+		</details>
+
+
+		<!-- 3 -->
+		<details class="details" id="faceControl">
+			<summary>
+				<h1>faceControl</h1>
+			</summary>
+			<div class="ex">
+				<h2>
+					•Напишите<br>
+					функцию faceControl, которая будет проверять возраст<br>
+					посетителя. Если возраст равен или больше 18,<br>
+					функция должна возвращать строку<br>
+					“Welcome", в остальных случаях строку<br>
+					"Отказ".<br>
+					С помощью if<br>
+					else
+				</h2>
+
+				<form onSubmit="return false;">
+					<label for="inputEx3" >Input age: </label>
+					<input type="number" id="inputEx3" onkeyup="faceControl()" onchange="faceControl()">
+					
+					<p>
+						<span id="resultEx3">Enter age!</span>
+					</p>
+				</form>
+			</div>
+		</details>
+
+
+		<!-- 4 -->
+		<details class="details" id="getNextAge">
+			<summary>
+				<h1>getNextAge</h1>
+			</summary>
+			<div class="ex">
+				<h2>
+					•Напишите<br>
+					код функции getNextAge, чтобы она возвращала введенный<br>
+					возраст пользователя в следующем году, но и в случае,<br>
+					если поле ввода не заполнено<br>
+					(то есть если значение age пустая строка),<br>
+					возвращала ноль.
+				</h2>
+
+				<form onSubmit="return false;">
+					<label for="inputEx4" >Input age: </label>
+					<input type="number" id="inputEx4" onkeyup="getNextAge()" onchange="getNextAge()">
+					
+					<p>
+						<span id="resultEx4">Enter age!</span>
+					</p>
+				</form>
+			</div>
+		</details>
+
+
+		<!-- 5 -->
+		<details class="details" id="canRide">
+			<summary>
+				<h1>canRide</h1>
+			</summary>
+			<div class="ex">
+				<h2>
+					•Напишите<br>
+					функцию canRide, возвращающую true,<br>
+					если рост посетителя аттракциона<br>
+					равен или больше 140см и false во всех остальных случаях.<br>
+					Функция не должна содержать if-условия.
+				</h2>
+
+				<form onSubmit="return false;">
+					<label for="inputEx5" >Input height: </label>
+					<input type="number" id="inputEx5" onkeyup="canRide()" onchange="canRide()">
+					
+					<p>
+						<span id="resultEx5">Enter height!</span>
+					</p>
+				</form>
+			</div>
+		</details>
+	</main>
+
+	<footer>
+		<nav>
+			<a href="#getAge">getAge</a>
+			<a href="#getRemainder">getRemainder</a>
+			<a href="#faceControl">faceControl</a>
+			<a href="#getNextAge">getNextAge</a>
+			<a href="#canRide">canRide</a>
+		</nav>
+	</footer>
+	
+	<script src="js/script.js"></script>
+</body> 
+
+</html>
