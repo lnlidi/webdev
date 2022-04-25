@@ -75,12 +75,12 @@ const user = ["Admin", "Moderator", "Editor"]
 
 //проверка
 const diff = (a, b) => {
-    if (a.length != b.length) return false; // Мас­си­вы раз­ной дли­ны не рав­ны
+    if (a.length != b.length) return false; // Маcсивы разной длины не равны
 
-    for(var i = 0; i < a.length; i++) // Цикл по всем эле­мен­там
-      if (a[i] !== b[i]) return false; // Ес­ли хоть один эле­мент от­ли­ча­ет­ся, мас­си­вы не рав­ны
+    for(var i = 0; i < a.length; i++) // Цикл по всем элементам
+      if (a[i] !== b[i]) return false; // Если хоть один элемент отличается, массивы не равны
    
-    return true; // Ина­че они рав­ны
+    return true; // Иначе они равны
 }
 if (diff(deleteUserRole(user), ["Moderator", "Editor"]) &&
     diff(deleteUserRole(user), ["Editor"])) {
