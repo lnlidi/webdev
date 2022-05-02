@@ -1,0 +1,133 @@
+@import url(reset.css); 
+
+header {
+	text-align: center;
+	margin-top: 30px;
+}
+
+header button {
+	margin: 0 10px;
+}
+
+body {
+	background: white;
+	overflow-y: overlay;
+}
+
+main {
+	margin: 40px 15vw;
+	font-family: Courier, monospace;
+	font-size: 18px;
+	margin-bottom: 60px;
+}
+
+h1 {
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+h2 {
+	cursor: default;
+	font-size: 18px;
+	color: gray;
+}
+
+h3 {
+	margin-top: 10px;
+	color: green;
+}
+
+form {
+	cursor: default;
+	margin: 10px 20px;
+	margin-top: 20px;
+}
+
+form p {
+	margin-top: 10px;
+}
+
+input {
+	width: 10vw;
+	padding: 5px;
+	outline: none;
+	font-family: Courier, monospace;
+	font-size: 16px;
+	border-width: 2px;
+	border-style: none none solid none;
+	border-color: rgba(0, 0, 0, 0.3);
+}
+
+input:hover{
+	border-color: rgba(0, 0, 0, 1.0);
+}
+
+input:focus {
+	border-color: orangered;
+}
+
+span#result {
+	color: red;
+	font-weight: bold;
+}
+
+.ex {
+	margin: 10px;
+	padding: 10px 20px;
+	border: 0.3vh solid black;
+	border-style: none solid none solid;
+}
+
+button {
+	font-size: 16px;
+	padding: 5px;
+	background: transparent;
+	border-style: none none solid none;
+	border-color: black;
+	color: black;
+	transition: all ease 0.6s;
+}
+
+button:hover {
+	background: black;
+	border-color: red;
+	color: white;
+	transform: scale(1.2);
+	transition: all ease 0.3s;
+}
+
+button:active {
+	background: red;
+	color: black;
+	transition: all ease 0.1s;
+}
+
+select {
+	appearance: none;
+	outline: none;
+	width: 200px;
+	padding: 5px;
+	background-color: transparent;
+	background-position: right;
+	background-image: url("../img/angle-down.svg");
+	background-repeat: no-repeat;
+	font-family: Courier, monospace;
+	font-size: 16px;
+	border-width: 2px;
+	border-style: none none solid none;
+	border-color: black;
+	opacity: 0.5;
+	color: black;
+	transition: all ease 0.5s;
+}
+
+select:hover {
+	opacity: 1;
+	transition: all ease 0.3s;
+}
+
+select:focus {
+	border-color: orangered;
+	transition: all ease 0.1s;
+}
