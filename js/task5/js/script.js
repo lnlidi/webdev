@@ -1,9 +1,12 @@
 
 /* 1 */
 function getRate(sel) {
-	if(sel === "usd") return 2811 + "$"
-	if(sel === "rub") return 200612 + "₽"
-	if(sel === "eur") return 2666 + "€"
+	const etherium = {
+		usd: 2811,
+		rub: 200612,
+		eur: 2666
+	}
+	return etherium[sel]
 }
 
 /* 2 */
