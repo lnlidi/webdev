@@ -1,0 +1,72 @@
+<div class="main">
+    <div class="band">
+        <ul class="band-list">
+            <h1> Current members: </h1>
+            {{#each band}}
+                {{#if this.cop}}
+                    <li>
+                        <a onclick="show('{{name}}', '{{surname}}', '{{job}}', '{{born}}')"><h2> {{name}} {{surname}} </h2></a>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+
+        <ul class="band-list">
+            <h1> Former members: </h1>
+            {{#each band}}
+                {{#unless this.cop}}
+                    <li>
+                        <a onclick="show('{{name}}', '{{surname}}', '{{job}}', '{{born}}')"><h2> {{name}} {{surname}} </h2></a>
+                    </li>
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <span class="member-show" id="member-show"></span>
+</div>
+
+<script>
+    const member = document.getElementById("member-show");
+    function show(name, surname, job, born) {
+        member.style.display = "flex";
+        var frame = document.createElement('div');
+        frame.id = 'member-frame';
+        frame.className = 'member-frame';
+        frame.innerHTML = `<a onclick="hide()" class="btn-a" id="btn"><img src="img/icons/x.svg"></a>`;
+
+        var info = document.createElement('div');
+        info.id = 'member-info';
+        info.className = 'member-info';
+        info.innerHTML =
+            `<div class="member-img">` +
+                `<img src="img/members/${name}_${surname}.jpg">` +
+            `</div>`;
+
+        var bio = document.createElement('div');
+        bio.id = 'member-bio';
+        bio.className = 'member-bio';
+        bio.innerHTML =
+            `<h1>${name} ${surname}</h1>` +
+            `<h2>${job}</h2>`;
+        if(born != "") bio.innerHTML += `<h2><b>Born:</b> ${born}</h2>`
+        
+        info.appendChild(bio);
+        frame.appendChild(info);
+        member.appendChild(frame);
+    }
+
+    function hide() {
+        const member = document.getElementById("member-show");
+        member.style.display = "";
+        member.innerHTML = ""
+    }
+
+    member.addEventListener('mousedown', function(e){
+        const frame = document.getElementById("member-frame");
+        var frameClick = frame.contains(e.target);
+        if (!frameClick) {
+            hide();
+        }
+    });
+</script>

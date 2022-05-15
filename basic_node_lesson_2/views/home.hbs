@@ -1,0 +1,75 @@
+<div class="carousel" id="carousel">
+    <button class="grouplove" id="grouplove" onclick="showFull()">
+        <h1> Grouplove </h1>
+        <p> 
+            is an American alternative rock band that was formed in 2009 by
+            Hannah Hooper (vocals, keyboards),
+            Christian Zucconi (vocals, guitar),
+            Sean Gadd (bass),
+            Andrew Wessen (guitar, vocals),
+            and Ryan Rabin (drums).
+        </p>
+        <img src="img/icons/maximize.svg" class="max" id="max">
+    </button>
+    
+    {{#each carouselImg}}
+        <div class="carousel-img slide">
+            <img src="img/band/{{nameImg}}">
+        </div>
+    {{/each}}
+    
+    <a class="prev" id="prev" onclick="plusSlides(-1)"><img src="img/icons/left.svg" class="left" id="left"></a>
+    <a class="next" id="next" onclick="plusSlides(1)"><img src="img/icons/right.svg" class="right" id="right"></a>
+    <img src="img/icons/minimize.svg" class="min" id="min">
+</div>
+
+<script>
+    let slideIndex = 1;
+    let show = false;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("carousel-img");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+
+    function showFull() {
+        var gl = document.getElementById("grouplove");
+        var cs = document.getElementById("carousel");
+        var pr = document.getElementById("prev");
+        var ne = document.getElementById("next");
+        var mm = document.getElementById("min");
+        if(show){
+            show = false;
+            pr.style.zIndex = 1;
+            ne.style.zIndex = 1;
+            gl.style.opacity = "1";
+            cs.style.maxHeight = "";
+            mm.style.display = "";
+            window.location.href = "#carousel";
+        }
+        else {
+            show = true;
+            pr.style.zIndex = 3;
+            ne.style.zIndex = 3;
+            gl.style.opacity = "0";
+            cs.style.maxHeight = "100vh";
+            mm.style.display = "flex";
+            window.location.href = "#carousel";
+        }
+    }
+</script>
+
+<div class="main">
+    {{>bio}}
+</div>

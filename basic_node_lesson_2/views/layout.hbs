@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icons/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/bio.css">
+    <link rel="stylesheet" href="css/band.css">
+    <link rel="stylesheet" href="css/disc.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>{{mainTitle}}</title>
+</head>
+<body>
+    {{>header}}
+
+    <main>
+        {{{body}}}
+    </main>
+
+    {{!-- 
+
+    <form action="/search" method="POST">
+        <input type="text" name="test">
+        <input type="submit" value="Отправить">
+    </form>
+    
+    --}}
+
+    {{>footer}}
+</body>
+</html>

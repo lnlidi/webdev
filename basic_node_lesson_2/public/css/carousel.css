@@ -1,0 +1,133 @@
+.carousel {
+    max-height: 40vh;
+    position: relative;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    transition: all ease 0.4s;
+}
+
+.carousel:hover { max-height: 45vh; }
+
+.grouplove {
+    display: flex;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 10vh;
+    transition: all ease 0.4s;
+}
+
+.grouplove:hover {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(239 48 31);
+}
+
+.grouplove p {
+    color: rgb(172, 172, 172);
+    font-size: 4vh;
+}
+
+.max {
+    height: 4vh;
+    margin-top: 1.5vh;
+    padding: 0.5vh;
+    filter: invert(100%);
+    opacity: 0.4;
+    border-radius: 1vh;
+    transition: all 0.4s;
+}
+
+.grouplove:hover .max {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.grouplove:active .max { background-color: rgb(255, 255, 255); transition: all 0.2s; }
+
+.min {
+    display: none;
+    position: absolute;
+    height: 4vh;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    margin-bottom: 3vh;
+    padding: 0.5vh;
+    filter: invert(100%);
+    opacity: 0.4;
+    border-radius: 1vh;
+    transition: all 0.4s;
+}
+
+.grouplove:hover ~ .min {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.grouplove:active ~ .min { background-color: rgb(255, 255, 255); transition: all 0.2s; }
+
+.carousel-img {
+    display: none;
+    width: 100%;
+}
+
+.carousel-img img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.prev, .next {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background: rgb(0,0,0);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.prev { left: 0; background: linear-gradient(270deg, rgba(0,0,0,0) 7%, rgba(0,0,0,0.7) 100%); }
+.next { right: 0; background: linear-gradient(90deg, rgba(0,0,0,0) 7%, rgba(0,0,0,0.7) 100%); }
+
+.right, .left { filter: invert(100%); opacity: 0.6; margin: auto; transition: all 0.2s; }
+.right { margin-right: 3vw; }
+.left { margin-left: 3vw; }
+
+.prev:active .left, .next:active .right { opacity: 1; }
+
+.prev:hover { opacity: 1; }
+.next:hover { opacity: 1; }
+
+.slide {
+    animation-name: shot;
+    animation-duration: 1s;
+}
+
+@keyframes shot {
+    from {
+        opacity: 0.3;
+        transform: scale(1.3);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}

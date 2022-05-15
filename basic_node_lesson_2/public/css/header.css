@@ -1,0 +1,47 @@
+header {
+	width: 100%;
+	min-height: 10vh;
+}
+
+.header-div {
+	height: 100%;
+	padding: 0 10vw;
+	display: flex;
+	align-items: center;
+	font-family: Nunito-Light;
+	font-size: 5vh;
+	background-color: #000000;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	width: 25%;
+}
+
+.logo-container a {
+	display: flex;
+	transition: all ease 0.3s;
+	z-index: 3;
+}
+
+.logo-container a:hover { transform: rotateZ(5deg) scale(1.2); }
+
+.logo-container img { width: 100%; }
+
+.header-navigators {
+	width: 75%;
+	text-align: right;
+}
+
+.header-navigators a {
+	display: inline-block;
+	margin-left: 1vw;
+	color: rgba(255, 255, 255, 0.4);
+	transition: all ease 0.3s;
+}
+
+.header-navigators a:hover {
+	color: rgb(255, 255, 255);
+	transform: scale(1.1);
+}

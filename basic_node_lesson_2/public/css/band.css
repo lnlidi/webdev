@@ -1,0 +1,78 @@
+.band {
+    display: flex;
+    margin-bottom: 5vh;
+    font-size: 4vh;
+    line-height: 150%;
+}
+
+.band-list { margin-right: 5vw; }
+.band-list h1 { font-size: 5vh; margin-bottom: 1vh; }
+.band-list a { color: rgba(0, 0, 0, 0.4); transition: all ease 0.3s; }
+.band-list a:hover { color: rgba(0, 0, 0, 1); }
+
+.member-show {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.member-frame {
+    display: block;
+    width: 50vw;
+    height: 60vh;
+    padding: 5vh;
+    backdrop-filter: blur(5px);
+    border-radius: 3vh;
+    box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.4);
+}
+
+.member-frame a {
+    height: 10%;
+    float: right; 
+    opacity: 0.4;
+    transition: all ease 0.4s;
+}
+
+.member-frame a img {
+    height: 100%;
+}
+
+.member-frame a:hover { opacity: 1; }
+
+.member-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    height: 90%;
+    width: 100%;
+}
+
+.member-img {
+    height: 80%;
+    margin-bottom: 3vh;
+    transition: all ease 0.4s;
+}
+
+.member-img:hover { transform: scale(1.5); }
+
+.member-img img {
+    height: 100%;
+    border-radius: 3vh;
+    box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.6);
+}
+
+.member-bio h1 {
+    font-size: 5vh;
+}
+
+.member-bio h2 {
+    font-size: 3vh;
+    color: rgba(0, 0, 0, 0.6);
+}

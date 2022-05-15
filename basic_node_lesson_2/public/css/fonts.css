@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Noto_Sans-ExtraLight;
+    src: url("/fonts/Noto_Sans/NotoSans-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: Nunito-Light;
+    src: url("/fonts/Nunito/static/Nunito-Light.ttf");
+}
+
+@font-face {
+    font-family: Ceveat-Regular;
+    src: url("/fonts/Caveat/static/Caveat-Regular.ttf");
+}
+
+@font-face {
+    font-family: Koulen;
+    src: url("/fonts/Koulen/Koulen-Regular.ttf");
+}
