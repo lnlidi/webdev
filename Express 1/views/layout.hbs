@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icons/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/bio.css">
+    <link rel="stylesheet" href="/css/band.css">
+    <link rel="stylesheet" href="/css/disc.css">
+    <link rel="stylesheet" href="/css/album.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>{{mainTitle}}</title>
+</head>
+<body>
+    {{>header}}
+
+    <main>
+        {{{body}}}
+    </main>
+    
+    <a class="up" id="up" onclick="up()"><img src="/img/icons/right-up.svg"></a>
+
+    <script>
+        const upBtn = document.getElementById("up");
+        var upShow = false;
+        var curH = 800;
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.documentElement.scrollTop >= curH || document.body.scrollTop >= curH) { showUpBtn(); }
+            else { hideUpBtn(); }
+        };
+
+        function up() {
+            scroll({ top: 0, behavior: "smooth" });
+            hideUpBtn();
+        }
+
+        function showUpBtn() {
+            if(!upShow) {
+                upShow = true;
+                upBtn.style.display = "block";
+                upBtn.animate(
+                    [
+                        { transform: 'translate3D(0, -5vh, 0)', opacity: 0 },
+                        { transform: 'translate3D(0, 0, 0)' }
+                    ],
+                    { duration: 200 }
+                );
+            }
+        }
+
+        function hideUpBtn() {
+            if(upShow) {
+                upShow = false;
+                upBtn.animate(
+                    [
+                        { transform: 'translate3D(0, 0, 0)' },
+                        { transform: 'translate3D(0, 5vh, 0)', opacity: 0 }
+                    ],
+                    { duration: 200 }
+                );
+                window.setTimeout(function(){ upBtn.style.display = ""; }, 200);
+            }
+        }
+    </script>
+
+    {{!-- {{>footer}} --}}
+</body>
+</html>

@@ -60,7 +60,7 @@
     transition: all ease 0.4s;
 }
 
-.member-img:hover { transform: scale(1.5); }
+.member-img:hover { transform: scale(1.4); }
 
 .member-img img {
     height: 100%;
@@ -68,9 +68,7 @@
     box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.6);
 }
 
-.member-bio h1 {
-    font-size: 5vh;
-}
+.member-bio h1 { font-size: 5vh; }
 
 .member-bio h2 {
     font-size: 3vh;

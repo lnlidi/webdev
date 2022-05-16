@@ -1,0 +1,16 @@
+<div class="main">
+    <div class="album">
+        <div class="album-img">
+            <img src="/img/albums/{{alb.nameImg}}">
+        </div>
+        <div class="album-info">
+            <h1>{{alb.album}}</h1>
+            <h2>{{alb.released}}</h2>
+            <ul class="album-tracks">
+                {{#each alb.tracks}}
+                    <li class="track"> <p class="nn"> {{no}}. {{name}} </p> <p> ({{length}}) </p> </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

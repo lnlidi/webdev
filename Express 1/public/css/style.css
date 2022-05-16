@@ -1,0 +1,41 @@
+body {
+    overflow-y: scroll;
+	height: 100vh;
+	display: flex; 
+	flex-direction: column;
+}
+
+a {
+	user-select: none;
+    text-decoration: none;
+}
+
+h1, h2 {
+	font-family: Koulen;
+}
+
+p {
+	font-family: Nunito-Light;
+}
+
+.main { padding: 5vh 15vw; }
+
+.up {
+	display: none;
+	position: fixed;
+	height: 5vh;
+	bottom: 0;
+	right: 0;
+	margin-right: 10vh;
+	margin-bottom: 10vh;
+	padding: 2vh;
+	border-radius: 100vh;
+	opacity: .4;
+	background-color: rgba(0, 0, 0, 1);
+	transition: all 0.4s;
+}
+
+.up:hover { opacity: 0.6; }
+.up:active { opacity: 1; transition: all 0.2s; }
+
+.up img { height: 100%; filter: invert(100%); }

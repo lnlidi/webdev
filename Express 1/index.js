@@ -38,8 +38,10 @@ app.get('/', (req, res) => {
 
 const disc = [
     {
+        id: 1,
         album: "Never Trust a Happy Song",
         released: "September 5, 2011",
+        nameImg: "never_trust_a_happy_song.jpg",
         tracks: [
             { no: 1, name: "Itchin' on a Photograph", length: "4:20" },
             { no: 2, name: "Tongue Tied", length: "3:38" },
@@ -57,8 +59,10 @@ const disc = [
         ]
     },
     {
+        id: 2,
         album: "Spreading Rumours",
         released: "September 17, 2013",
+        nameImg: "spreading_rumours.jpg",
         tracks: [
             { no: 1, name: "I'm With You", length: "5:33" },
             { no: 2, name: "Borderlines and Aliens", length: "3:50" },
@@ -79,8 +83,10 @@ const disc = [
         ]
     },
     {
+        id: 3,
         album: "Big Mess",
         released: "September 9, 2016",
+        nameImg: "big_mess.jpeg",
         tracks: [
             { no: 1, name: "Welcome to Your Life", length: "3:47" },
             { no: 2, name: "Do You Love Someone", length: "3:50" },
@@ -97,8 +103,10 @@ const disc = [
         ]
     },
     {
+        id: 4,
         album: "Healer",
         released: "March 13, 2020",
+        nameImg: "healer.jpg",
         tracks: [
             { no: 1, name: "Deleter", length: "3:54" },
             { no: 2, name: "Inside Out", length: "3:28" },
@@ -114,8 +122,10 @@ const disc = [
         ]
     },
     {
+        id: 5,
         album: "This Is This",
         released: "March 12, 2021",
+        nameImg: "this_is_this.webp",
         tracks: [
             { no: 1, name: "Primetime", length: "3:21" },
             { no: 2, name: "This Is The End", length: "3:11" },
@@ -133,6 +143,12 @@ const disc = [
 // Discography
 app.get('/discography', (req, res) => {
     res.render('discography', {mainTitle: 'Discography', disc: disc})
+})
+
+// Album id
+app.get('/album/:disc_id', (req, res) => {
+    const alb = disc.find((di) => di["id"] === parseInt(req.params["disc_id"]))
+    res.render('album',  {mainTitle: alb.album, alb: alb})
 })
 
 const band = [
@@ -195,13 +211,6 @@ const band = [
 app.get('/members', (req, res) => {
     res.render('members', {mainTitle: 'Band members', band: band})
 })
-
-// // member id
-// app.get('/member/:band_id', (req, res) => {
-//     // res.send(req.params)
-//     const member = band.find((us) => us["id"] === parseInt(req.params["band_id"]))
-//     res.render('member',  {mainTitle: 'member', member: member})
-// })
 
 // Search
 app.post('/search', (req, res) => {

@@ -49,6 +49,7 @@
         var pr = document.getElementById("prev");
         var ne = document.getElementById("next");
         var mm = document.getElementById("min");
+        const offsetTop = document.getElementById('carousel').offsetTop;
         if(show){
             show = false;
             pr.style.zIndex = 1;
@@ -56,7 +57,11 @@
             gl.style.opacity = "1";
             cs.style.maxHeight = "";
             mm.style.display = "";
-            window.location.href = "#carousel";
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+            
         }
         else {
             show = true;
@@ -65,7 +70,10 @@
             gl.style.opacity = "0";
             cs.style.maxHeight = "100vh";
             mm.style.display = "flex";
-            window.location.href = "#carousel";
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
         }
     }
 </script>

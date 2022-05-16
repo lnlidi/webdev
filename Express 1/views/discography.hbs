@@ -1,0 +1,126 @@
+<div class="main">
+    <div class="disc">
+        <div class="disc-head">
+            <h1>Albums</h1>
+        </div>
+        <ul id="disc-list">
+            <nav class="scr">
+                <button class="scr-left" id="scr-left" onclick="scrLeft()">
+                    <img src="img/icons/left.svg">
+                </button>
+
+                <button class="scr-right" id="scr-right" onclick="scrRight()">
+                    <img src="img/icons/right.svg">
+                </button>
+            </nav>
+            {{#each disc}}
+                <li>
+                    <a href="/album/{{id}}">
+                        <img class="disc-img" src="img/albums/{{nameImg}}">
+                        <h1 class="disc-name">{{album}}</h1>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <script>
+        const dl = document.getElementById('disc-list');
+        var sl = document.getElementById('scr-left');
+        var sr = document.getElementById('scr-right');
+        var slShow = false;
+        var srShow = true;
+        var step = 400;
+        var max;
+        
+        function scrLeft() {
+            dl.style.scrollBehavior = '';
+            dl.scrollLeft -= step;
+            if(!srShow) { showScr("sr") }
+            if(dl.scrollLeft - step <= 0) { hideScr("sl") }
+        }
+
+        function scrRight() {
+            dl.style.scrollBehavior = '';
+            dl.scrollLeft += step;
+            if(!slShow){ showScr("sl") }
+            max = Math.floor(dl.scrollWidth) - Math.floor(dl.clientWidth);
+            if(dl.scrollLeft + step >= max) { hideScr("sr") }
+        }
+
+        dl.addEventListener("wheel", (e) => {
+            dl.style.scrollBehavior = 'unset';
+            e.preventDefault();
+            dl.scrollBy({ left: e.deltaY < 0 ? -150 : 150, });
+
+            if(dl.scrollLeft <= 0){ hideScr("sl") }
+            else { showScr("sl") }
+            
+            max = Math.floor(dl.scrollWidth) - Math.floor(dl.clientWidth);
+            if(dl.scrollLeft >= max){ hideScr("sr") }
+            else { showScr("sr") }
+        });
+
+        function showScr(name) {
+            if(name == 'sr') {
+                if(!srShow) {
+                    srShow = true;
+                    sr.style.display = 'flex';
+                    sr.animate(
+                        [
+                            { transform: 'translate3D(-5vh, 0, 0)', opacity: 0 },
+                            { transform: 'translate3D(0, 0, 0)' }
+                        ],
+                        { duration: 200 }
+                    );
+                }
+            }
+            else {
+                if(!slShow) {
+                    slShow = true;
+                    sl.style.display = 'flex';
+                    sl.animate(
+                        [
+                            { transform: 'translate3D(-5vh, 0, 0)', opacity: 0 },
+                            { transform: 'translate3D(0, 0, 0)' }
+                        ],
+                        { duration: 200 }
+                    );
+                }
+            }
+        }
+
+        function hideScr(name) {
+            if(name == 'sr') {
+                if(srShow) {
+                    srShow = false;
+                    sr.animate(
+                        [
+                            { transform: 'translate3D(0, 0, 0)' },
+                            { transform: 'translate3D(5vh, 0, 0)', opacity: 0 }
+                        ],
+                        { duration: 200 }
+                    );
+                    window.setTimeout(function(){
+                        sr.style.display = 'none';
+                    }, 200);
+                }
+            }
+            else {
+                if(slShow) {
+                    slShow = false;
+                    sl.animate(
+                        [
+                            { transform: 'translate3D(0, 0, 0)' },
+                            { transform: 'translate3D(-5vh, 0, 0)', opacity: 0 }
+                        ],
+                        { duration: 200 }
+                    );
+                    window.setTimeout(function(){
+                        sl.style.display = 'none';
+                    }, 200);
+                }
+            }
+        }
+    </script>
+</div>

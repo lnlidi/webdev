@@ -1,0 +1,73 @@
+.disc-head {
+    font-size: 7vh;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.disc ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 5vh 2vh;
+    transition: all 0.4s;
+}
+
+.disc li, .disc li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disc li { user-select: none; margin: 0 2vw; }
+
+.disc li a {
+    width: 100%;
+    font-size: 4vh;
+    color: rgba(0, 0, 0, 0.4);
+    transition: all 0.4s;
+}
+
+.disc li a:hover { color: rgba(0, 0, 0, 1); }
+
+
+
+.disc-img {
+    user-select: none;
+    height: 40vh;
+    margin-bottom: 3vh;
+    position: relative;
+    border-radius: 100%;
+    box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.4s;
+}
+
+.disc-img:hover { transform: scale(0.9); border-radius: 0; }
+
+.scr { width: 100%; }
+
+.scr-left, .scr-right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    width: 6vh;
+    height: 6vh;
+    margin: auto;
+    padding: 0.5vh;
+    border: none;
+    border-radius: 10vh;
+    filter: invert(100%);
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0.4;
+    transition: all 0.4s;
+}
+
+.scr-left img, .scr-right img { height: 100%; }
+
+.scr-left { display: none; left: 0; margin-left: 10vw; }
+.scr-right { right: 0; margin-right: 10vw; }
+
+.scr-left:hover, .scr-right:hover { opacity: 0.6; transform: scale(1.1); }
+.scr-left:active, .scr-right:active { opacity: 1; transition: all 0.2s; }
