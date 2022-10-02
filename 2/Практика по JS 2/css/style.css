@@ -1,0 +1,13 @@
+main {
+	font-size: 16px;
+}
+
+h1 {
+	margin: 10px;
+}
+
+.ex {
+	border: 2px solid black;
+	padding: 0 20px;
+	margin-bottom: 50px;
+}

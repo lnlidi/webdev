@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тема 5 Работа с объектами</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<main class="container">
+
+		1. Напишите функцию getRate, чтобы она возвращала стоимость
+		эфира в выбранной валюте. Выбор оформить с помощью < select >
+		<br>
+		const etherium = {usd: 2811, rub: 200612, eur: 2666}
+		<br>
+		<select id="select" onchange="selfunc()">
+			<option selected disabled>...</option>
+			<option value="usd">usd</option>
+			<option value="rub">rub</option>
+			<option value="eur">eur</option>
+		</select>
+		<span id="ex1">.</span><br><br>
+
+		2. Напишите функцию getValues, чтобы она возвращала массив,
+		из значений входящего объекта, написанные капсом (заглавными
+		буквами)
+		<br>
+		getValues({lang: "JavaScript", course: "third"}) // ['JAVASCRIPT', 'THIRD']
+		<br>
+		<span id="ex2">.</span><br><br>
+		
+
+		3. Напишите функцию getInfo, чтобы она возвращала объект с
+		ключами, используя короткую запись
+		<br>
+		const adress = {street: 'Lenina', building: 1, flat: 40}
+		<br>
+		<span id="ex3">.</span><br><br>
+
+
+		4. Напишите функцию joinArrays, чтобы она возвращала новый
+		объект на основе двух входящих
+		<br>
+		<span id="ex4">.</span><br><br>
+	</main>
+	
+	<script src="js/script.js"></script>
+</body> 
+
+</html>

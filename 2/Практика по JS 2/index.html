@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Практика по JS 2</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<main class="container">
+		<h1>Задание 1</h1>
+		<div class="ex">
+			<p>
+				•Написать
+				функцию getAge, чтобы она возвращала введенный
+				возраст пользователя
+				в следующем году (сколько будет ему
+				лет в след году).
+				(вводите 18 = выводит 19)
+			</p>
+			<label>Введите число:</label>
+			<input type="number" id="numEx1">
+			<button onclick="Ex1()">Выполнить</button>	
+			<p>
+				Ответ:
+				<span id="resEx1">.</span>
+			</p>
+		</div>
+
+		<h1>Задание 2</h1>
+		<div class="ex">
+			<p>
+				•Напишите
+				функцию getRemainder, чтобы она возвращала остаток
+				деления принятых в параметрах числа и делителя. (вводите 10 и 3 = выводит 1)
+			</p>
+			<label>a:</label>
+			<input type="number" id="numEx2_a">
+			<label>b:</label>
+			<input type="number" id="numEx2_b">
+			<button onclick="Ex2()">Выполнить</button>
+			<p>
+				Ответ:
+				<span id="resEx2">.</span>
+			</p>
+		</div>
+
+		<h1>Задание 3</h1>
+		<div class="ex">
+			<p>
+				•Напишите
+				функцию faceControl, которая будет проверять возраст
+				посетителя. Если возраст равен или больше 18, функция должна возвращать строку
+				“Welcome", в остальных случаях строку
+				"Отказ".
+				С помощью if
+				else
+			</p>
+			<label>Введите число:</label>
+			<input type="number" id="numEx3">
+			<button onclick="Ex3()">Выполнить</button>
+			<p>
+				Ответ: 
+				<span id="resEx3">.</span>
+			</p>
+		</div>
+		
+		<h1>Задание 4</h1>
+		<div class="ex">
+			<p>
+				•Напишите
+				код функции getNextAge, чтобы она возвращала введенный
+				возраст пользователя в следующем году, но и в случае, если поле ввода не
+				заполнено (то есть если значение age пустая строка), возвращала ноль.
+			</p>
+			<label>Введите число:</label>
+			<input type="number" id="numEx4">
+			<button onclick="Ex4()">Выполнить</button>
+			<p>
+				Ответ:
+				<span id="resEx4">.</span>
+			</p>
+		</div>
+
+		<h1>Задание 5</h1>
+		<div class="ex">
+			<p>
+				•Напишите
+				функцию canRide, возвращающую true, если рост посетителя аттракциона
+				равен или больше 140см и false во всех остальных случаях. Функция
+				не должна содержать if-условия.
+			</p>
+			<label>Введите число:</label>
+			<input type="number" id="numEx5">
+			<button onclick="Ex5()">Выполнить</button>
+			<p>
+				Ответ:
+				<span id="resEx5">.</span>
+			</p>
+		</div>
+	</main>
+	
+	<script src="js/script.js"></script>
+</body> 
+
+</html>

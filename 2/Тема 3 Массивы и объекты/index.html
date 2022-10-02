@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Тема 3 Массивы и объекты</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<main class="container">
+
+		1.Напишите
+		функцию sumArray, чтобы она перебирала все элементы
+		массива чисел и возвращала сумму всех элементов (используя ForEach).
+		<br>
+		(sumArray([4, 6, 16, 73, 5]) // 104)
+		<br>
+		<span id="ex1">.</span><br><br>
+
+		2.Напишите
+		функцию getAboveZero, чтобы она возвращала массив,
+		содержащий только плюсовые температуры.
+		<br>
+		(getAboveZero ([1, -3, -2, 4, 10]) // [1, 4, 10])
+		<br>
+		<span id="ex2">.</span><br><br>
+		
+
+		3.Напишите
+		фукнцию getPonies, чтобы она возвращала пони с заданным именем
+		<br>
+		(getPonies([‘TwilightSparkle’, ‘RainbowDash’, ‘AppleJack’, ‘Rarity’, ‘Pinkie Pie’, ‘Fluttershy’], ‘AppleJack’)) // 'AppleJack'
+		<br>
+		(getPonies([‘TwilightSparkle’, ‘RainbowDash’, ‘AppleJack’, ‘Rarity’, ‘Pinkie Pie’, ‘Fluttershy’], ‘Spike’)) // false
+		<br>
+		<span id="ex3">.</span><br><br>
+
+
+		4.Напишите
+		функцию isTxIncluded, чтобы она возвращала true,
+		если транзакция tx входит в блок транзакций bk,
+		и false,
+		если нет.
+		<br>
+		(isTxIncluded(["0xaea0", "0x8f80", "0xf3ad", "0x17ec"], "0x9e0a") // false)
+		<br>
+		<span id="ex4">.</span><br><br>
+		
+
+		5.Напишите
+		функцию getSizes, чтобы она возвращала массив,
+		состоящий из длин строк для элементов массива words.
+		<br>
+		(getSizes(["Moscow", "Coding", "School"]) // [6, 6, 6])
+		<br>
+		<span id="ex5">.</span><br><br>
+		
+
+		6.Напишите
+		функцию getWithSpaces, чтобы она возвращала массив из
+		двух элементов:
+		<br>
+		— строки, составленной из слов
+		массива strings, соединенных пробелами;
+		<br>
+		— длины этой строки.
+		<br>
+		(getWithSpaces(["Moscow", “never", “sleep"]) // ["Moscow never sleep ", 16]) 
+		<br>
+		<span id="ex6">.</span><br><br>
+		
+
+		8.Напишите
+		функцию getEpisodes, чтобы она возвращала строку Аниме
+		X включает Y серий, где X заменяется на название аниме, а Y на количество
+		серий. Эти значения находятся в объекте anime.
+		<br>
+		(getEpisodes({title: "Code Geass", episodes: 25})
+		<br>
+		// "Аниме Code Geass включает 25 серий")
+		<br>
+		<span id="ex8">.</span><br><br>
+		
+
+		9.Функция triple возвращает свой параметр,
+		умноженный на 3. Перепишите ее в стрелочном стиле.
+		<br>
+		(triple(2) // 6)
+		<br>
+		<span id="ex9">.</span><br><br>
+		
+		10.Используя
+		стрелочные функции, напишите функцию getAvgGlucose,
+		чтобы она возвращала среднее арифметическое замеров глюкозы checks.
+		<br>
+		(getAvgGlucose([5.4, 8.1, 6.3, 4.9]) // 6.2)
+		<br>
+		<span id="ex10">.</span>
+	</main>
+	
+	<script src="js/script.js"></script>
+</body> 
+
+</html>
