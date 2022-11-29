@@ -7,12 +7,12 @@ const app = express()
 
 // to start the server write in terminal > node index.js
 app.listen(3000, () => {
-    console.log("Server is started (to stop press: 'ctrl' + 'c')")
+    console.log("Visit: http://localhost:3000\nServer is started (to stop press: 'ctrl' + 'c')")
 })
 app.set('view engine', 'hbs')
 hbs.registerPartials(path.join(__dirname, 'views/partials'))
 app.use(express.static(__dirname + '/public'))
-
+ 
 const  carouselImg = [
     {
         nameImg: "Grouplove_1.jpg"
